@@ -1,0 +1,1 @@
+{"mappings":"ACEA","sources":["src/css/main.scss","src/css/_layout.scss","src/css/_base.scss"],"sourcesContent":["@use 'layout';\r\n@use 'base';",null,null],"names":[],"version":3,"file":"index.8c1c22dc.css.map","sourceRoot":"/__parcel_source_root/"}
