@@ -1,32 +1,31 @@
+// VARIABLER
+$line-height: 150%;
+$font-family: Arial, Helvetica, sans-serif;
+$main-color: rgb(0, 162, 255);
+$text-color: black;
+$link-text-color: blue;
+
 body {
-    width: 100vw;
-    padding: 0%;
-    margin: 0%;
-    overflow-x: hidden;
-    line-height: 150%;
-    font-family: Arial, Helvetica, sans-serif;
+    line-height: $line-height;
+    font-family: $font-family;
 }
 
-h1 {
+@mixin h1-styles {
     font-size: 2em;
     font-weight: 600;
-    line-height: 150%;
-    font-family: Arial, Helvetica, sans-serif;
+    line-height: $line-height;
+    font-family: $font-family;
 }
 
-h2 {
+@mixin h2-styles {
     font-size: 1.5em;
     font-weight: 600;
-    line-height: 150%;
-    font-family: Arial, Helvetica, sans-serif;
+    line-height: $line-height;
+    font-family: $font-family;
 }
 
-p {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 150%;
+@mixin p-styles {
     font-size: 1em;
-}
-
-#logo {
-    width: 5em;
+    line-height: $line-height;
+    font-family: $font-family;
 }
