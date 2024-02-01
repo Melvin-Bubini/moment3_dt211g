@@ -29,7 +29,7 @@ header {
     width: fit-content;
     text-decoration: none;
     margin-left: 1em;
-    width: 50%;
+    width: 15%;
 }
 
 #open-menu {
@@ -42,7 +42,7 @@ header {
 
 #bigScreenList {
     display: flex;
-    width: 48%;
+    width: 65%;
     list-style-type: none;
     text-align: center;
     align-items: center;
@@ -54,17 +54,20 @@ header {
     color: base.$text-color;
     text-decoration: none;
     @include base.h2-styles;
+    padding: 0.5em;
 }
 
 .menyLänkar:hover {
     cursor: pointer;
     color: white;
+    background-color: darken(base.$main-color, 10%);
+    border: solid black 3px;
 }
 
 
 
 /* MOBILLÄGE */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
 
     #bigScreenList {
         display: none;
@@ -121,17 +124,11 @@ header {
 // MAIN STYLES
 
 main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    @include base.center-element;
 }
 
 .pic-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+    @include base.center-element;
 }
 
 @media screen and (min-width: 801px) {

@@ -12,6 +12,13 @@ body {
     font-family: $font-family;
 }
 
+@mixin center-element {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 @mixin h1-styles {
     font-size: 2em;
     font-weight: 600;
