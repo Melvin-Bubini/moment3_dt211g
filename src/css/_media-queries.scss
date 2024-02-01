@@ -1,0 +1,9 @@
+@use 'base';
+
+@media (prefers-color-scheme: dark) {
+    $theme: base.$dark-theme;
+}
+
+@media (prefers-color-scheme: light) {
+    $theme: base.$light-theme;
+}

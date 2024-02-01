@@ -118,20 +118,16 @@ main, .pic-container {
 
 @media screen and (width >= 801px) {
   main article, main section {
-    width: 30em;
+    width: 25em;
   }
 
   main div {
-    width: 50em;
+    width: 47em;
   }
 }
 
 @media screen and (width >= 401px) and (width <= 800px) {
-  main article, main section {
-    width: 20em;
-  }
-
-  main div {
+  main article, main section, main div {
     width: 25em;
   }
 }
