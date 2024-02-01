@@ -106,20 +106,36 @@ header {
   }
 }
 
-main {
+main, .pic-container {
   flex-direction: column;
   justify-content: center;
   align-items: center;
   display: flex;
 }
 
-main article, main section {
-  width: 20em;
-}
-
-@media screen and (width >= 1020px) {
+@media screen and (width >= 801px) {
   main article, main section {
     width: 30em;
+  }
+
+  main div {
+    width: 50em;
+  }
+}
+
+@media screen and (width >= 401px) and (width <= 800px) {
+  main article, main section {
+    width: 20em;
+  }
+
+  main div {
+    width: 25em;
+  }
+}
+
+@media screen and (width <= 400px) {
+  main article, main section, main div {
+    width: 12em;
   }
 }
 

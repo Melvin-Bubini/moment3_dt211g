@@ -120,23 +120,54 @@ header {
 
 // MAIN STYLES
 
-main{
+main {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
 }
 
-main {
-    article, section{
-        width: base.$container-width-small;
+.pic-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+@media screen and (min-width: 801px) {
+    main {
+
+        article,
+        section {
+            width: base.$container-width-big;
+        }
+
+        div {
+            width: 50em;
+        }
     }
 }
 
-@media screen and (min-width: 1020px) {
+@media screen and (min-width: 401px) and (max-width: 800px) {
     main {
-        article, section{
-            width: base.$container-width-big;
+        article,
+        section {
+            width: base.$container-width-small;
+        }
+        div {
+            width: 25em;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    main {
+        article,
+        section {
+            width: 12em;
+        }
+        div {
+            width: 12em;
         }
     }
 }
