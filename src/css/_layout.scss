@@ -127,6 +127,20 @@ main{
     flex-direction: column;
 }
 
+main {
+    article, section{
+        width: base.$container-width-small;
+    }
+}
+
+@media screen and (min-width: 1020px) {
+    main {
+        article, section{
+            width: base.$container-width-big;
+        }
+    }
+}
+
 
 /* FOOTER STYLES */
 

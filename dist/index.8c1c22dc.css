@@ -113,6 +113,16 @@ main {
   display: flex;
 }
 
+main article, main section {
+  width: 20em;
+}
+
+@media screen and (width >= 1020px) {
+  main article, main section {
+    width: 30em;
+  }
+}
+
 footer {
   background-color: #00a2ff;
   flex-direction: column;
