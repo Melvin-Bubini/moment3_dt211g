@@ -5,8 +5,13 @@ body {
     padding: 0%;
     margin: 0%;
     overflow-x: hidden;
+    line-height: base.$line-height;
+    @if base.$use-serif-font {
+        font-family: serif; // Tillämpa serif font family om villkoret är sant
+      } @else {
+        font-family: sans-serif; // Annars, tillämpa sans-serif font family
+      }
 }
-
 
 
 /* HEADER STYLES*/
@@ -14,10 +19,7 @@ body {
 /* STÖRRE SKÄRMAR */
 header {
     display: flex;
-    /* Placerar elementen längst ut till varje kant */
     align-items: center;
-    /* Centrerar vertikalt */
-    background-color: base.$main-color;
 }
 
 #logo {
@@ -131,6 +133,18 @@ main {
     @include base.center-element;
 }
 
+h1 {
+    @include base.h1-styles;
+}
+
+h2 {
+    @include base.h2-styles;
+}
+
+p {
+    @include base.p-styles;
+}
+
 @media screen and (min-width: 801px) {
     main {
 
@@ -147,24 +161,28 @@ main {
 
 @media screen and (min-width: 401px) and (max-width: 800px) {
     main {
+
         article,
         section {
-            width: base.$container-width-small;
+            width: base.$container-width-big;
         }
+
         div {
-            width: 25em;
+            width: base.$container-width-big;
         }
     }
 }
 
 @media screen and (max-width: 400px) {
     main {
+
         article,
         section {
-            width: 12em;
+            width: base.$container-width-small;
         }
+
         div {
-            width: 12em;
+            width: base.$container-width-small;
         }
     }
 }
@@ -173,7 +191,6 @@ main {
 /* FOOTER STYLES */
 
 footer {
-    background-color: base.$main-color;
     margin: 0%;
     display: flex;
     flex-direction: column;
@@ -183,7 +200,40 @@ footer {
 
 footer p {
     width: fit-content;
-    margin-left: 1em;
-    font-size: 1em;
+    margin-left: 2em;
     font-weight: 600;
+    margin-top: 1em;
+    @extend p;
+}
+
+@media (prefers-color-scheme: dark) {
+    header, footer {
+        background-color: base.$main-color-dark;
+    }
+
+    body {
+        background-color: base.$background-color-dark;
+    }
+
+    p, h1, h2, .menyLänkar {
+        color: base.$text-color-dark;
+    }
+
+    .menyLänkar:hover {
+        color: base.$text-color;
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    header, footer {
+        background-color: base.$main-color;
+    }
+
+    body {
+        background-color: base.$background-color;
+    }
+
+    p, h1, h2 {
+        color: base.$text-color;
+    }
 }
