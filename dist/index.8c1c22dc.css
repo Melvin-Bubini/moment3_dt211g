@@ -8,6 +8,7 @@ body {
 }
 
 header {
+  background-color: #00a2ff;
   align-items: center;
   display: flex;
 }
@@ -158,6 +159,7 @@ p, footer p {
 }
 
 footer {
+  background-color: #00a2ff;
   flex-direction: column;
   width: 100vw;
   margin: 2em 0% 0%;
@@ -172,8 +174,22 @@ footer p {
   font-weight: 600;
 }
 
+@media (prefers-color-scheme: light) {
+  header, footer, nav, .menu-btn {
+    background-color: #00a2ff;
+  }
+
+  body {
+    background-color: #fff;
+  }
+
+  p, footer p, h1, h2 {
+    color: #000;
+  }
+}
+
 @media (prefers-color-scheme: dark) {
-  header, footer {
+  header, footer, nav, .menu-btn {
     background-color: #005180;
   }
 
@@ -190,27 +206,12 @@ footer p {
   }
 }
 
-@media (prefers-color-scheme: light) {
-  header, footer {
-    background-color: #00a2ff;
-  }
-
-  body {
-    background-color: #fff;
-  }
-
-  p, footer p, h1, h2 {
-    color: #000;
-  }
-}
-
 #open-menu {
   margin-left: auto;
 }
 
 .menu-btn {
   cursor: pointer;
-  background-color: #00a2ff;
   border: 2px solid #000;
   align-items: center;
   margin-right: 5%;

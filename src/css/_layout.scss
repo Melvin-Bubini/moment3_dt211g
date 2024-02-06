@@ -6,11 +6,14 @@ body {
     margin: 0%;
     overflow-x: hidden;
     line-height: base.$line-height;
+
     @if base.$use-serif-font {
         font-family: serif; // Tillämpa serif font family om villkoret är sant
-      } @else {
+    }
+
+    @else {
         font-family: sans-serif; // Annars, tillämpa sans-serif font family
-      }
+    }
 }
 
 
@@ -20,6 +23,7 @@ body {
 header {
     display: flex;
     align-items: center;
+    background-color: base.$main-color;
 }
 
 #logo {
@@ -196,6 +200,7 @@ footer {
     flex-direction: column;
     width: 100vw;
     margin-top: 2em;
+    background-color: base.$main-color;
 }
 
 footer p {
@@ -206,26 +211,12 @@ footer p {
     @extend p;
 }
 
-@media (prefers-color-scheme: dark) {
-    header, footer {
-        background-color: base.$main-color-dark;
-    }
-
-    body {
-        background-color: base.$background-color-dark;
-    }
-
-    p, h1, h2, .menyLänkar {
-        color: base.$text-color-dark;
-    }
-
-    .menyLänkar:hover {
-        color: base.$text-color;
-    }
-}
-
 @media (prefers-color-scheme: light) {
-    header, footer {
+
+    header,
+    footer,
+    nav,
+    .menu-btn {
         background-color: base.$main-color;
     }
 
@@ -233,7 +224,34 @@ footer p {
         background-color: base.$background-color;
     }
 
-    p, h1, h2 {
+    p,
+    h1,
+    h2 {
+        color: base.$text-color;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+
+    header,
+    footer,
+    nav,
+    .menu-btn {
+        background-color: base.$main-color-dark;
+    }
+
+    body {
+        background-color: base.$background-color-dark;
+    }
+
+    p,
+    h1,
+    h2,
+    .menyLänkar {
+        color: base.$text-color-dark;
+    }
+
+    .menyLänkar:hover {
         color: base.$text-color;
     }
 }
