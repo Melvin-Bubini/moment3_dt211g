@@ -55,3 +55,39 @@
     position: relative;
     top: -3px;
 }
+
+
+// VANLIGA KNAPPAR
+
+.aniBtn{
+    margin: 1em auto 0;
+    padding: 1em 2em;
+    display: block;
+    border: 0;
+    font-size: 1.5em;
+    background: linear-gradient(90deg, var(--color-1), var(--color-2));
+    color: white;
+    transition: --color-1 1s, --color-2 1s;
+}
+
+.aniBtn:hover{
+    --color-1:blue;
+    --color-2:red;
+    cursor: pointer;    
+}
+
+.aniBtn2 {
+    margin: 1em auto 0;
+    padding: 1em 2em;
+    display: block;
+    border: 0;
+    font-size: 1.5em;
+    background-color: aquamarine;
+    color: black;
+    border-radius: 7%;
+}
+
+.aniBtn2:hover {
+    animation: aniBorderRadius 1s infinite alternate;
+
+}

@@ -1,10 +1,57 @@
 @keyframes bgcolor {
     0% {
-        background-color: green;
         left: 0;
     }
+
     100% {
-        background-color: orange;
         left: 100px;
+    }
+}
+
+@keyframes scale {
+    0% {
+        background-size: 100%;
+    }
+
+    100% {
+        background-size: 140%;
+    }
+}
+
+@keyframes aniBorderRadius {
+    0% {
+        border-radius: 7%;
+    }
+    100% {
+        border-radius: 50%;
+    }
+}
+
+@keyframes rotateYExample {
+    from {
+        transform: rotateY(0deg);
+    }
+
+    to {
+        transform: rotateY(180deg);
+    }
+}
+
+@keyframes aniTextShadow {
+    0% {
+        
+    }
+    100% {
+        text-shadow: 10px 1px black;
+        font-size: 3em;
+    }
+}
+
+@keyframes overlayOpacity {
+    0% {
+        opacity: 100%;
+    }
+    100% {
+        opacity: 0%;
     }
 }

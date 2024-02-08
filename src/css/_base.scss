@@ -26,7 +26,6 @@ $background-color-dark: #383838;
     font-size: 2em;
     font-weight: 600;
     line-height: $line-height;
-    
     margin-bottom: 0%;
 }
 
@@ -43,4 +42,15 @@ $background-color-dark: #383838;
     line-height: $line-height;
     
     margin-top: 0%;
+}
+
+@property --color-1 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: red;
+}
+@property --color-2 {
+    syntax: "<color>";
+    inherits: true;
+    initial-value: blue;
 }
