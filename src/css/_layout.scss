@@ -196,37 +196,44 @@ p {
 // ANIMERINGAR
 #diven {
     width: 50%;
-    height: 37em;
+    height: 27em;
     background-image: url(../pictures/alle.jpg);
     background-position: center;
-    margin: 5% auto;
+    margin: 0 auto 5%;
     position: relative;
     background-size: 100%;
-    animation-name: bgcolor;
-    animation-duration: 4s;
     border-radius: 50%;
+}
+
+#diven:hover {
+    animation-name: bgcolor;
+    animation-duration: 3s;
     animation-direction: alternate;
     animation-iteration-count: infinite;
 }
 
 .backgroundImage {
-    width: 50%;
-    height: 600px;
+    height: 800px;
     background-image: url(../pictures/alle.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: 100%;
     margin: 5% auto;
     animation: scale 5s infinite alternate linear;
+    
 }
 
 .aniShadow {
+    text-shadow: 5px -3px black;
+}
+
+.aniShadow:hover {
     animation: aniTextShadow 3s infinite alternate linear;
 }
 
 .hide {
     width: 30%;
-    margin: 5% auto;
+    margin: 0 auto 5%;
     position: relative;
 }
 
@@ -245,8 +252,7 @@ p {
 }
 
 .overlay:hover {
-    animation: overlayOpacity 3s forwards linear;
-    
+    animation: overlayOpacity 2.5s forwards linear;
 }
 
 

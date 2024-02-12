@@ -47,10 +47,10 @@ $background-color-dark: #383838;
 @property --color-1 {
     syntax: "<color>";
     inherits: true;
-    initial-value: red;
+    initial-value: rgb(0, 255, 34);
 }
 @property --color-2 {
     syntax: "<color>";
     inherits: true;
-    initial-value: blue;
+    initial-value: rgb(248, 22, 147);
 }

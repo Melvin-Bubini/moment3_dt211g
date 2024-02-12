@@ -1,21 +1,23 @@
 @property --color-1 {
   syntax: "<color>";
   inherits: true;
-  initial-value: red;
+  initial-value: #0f2;
 }
 
 @property --color-2 {
   syntax: "<color>";
   inherits: true;
-  initial-value: #00f;
+  initial-value: #f81693;
 }
 
 @keyframes bgcolor {
   0% {
+    top: 0;
     left: 0;
   }
 
   100% {
+    top: 20px;
     left: 100px;
   }
 }
@@ -41,19 +43,19 @@
 }
 
 @keyframes rotateYExample {
-  from {
-    transform: rotateY(0);
+  0% {
+    transform: rotateX(0);
   }
 
-  to {
-    transform: rotateY(180deg);
+  100% {
+    transform: rotateX(180deg);
   }
 }
 
 @keyframes aniTextShadow {
   100% {
-    text-shadow: 10px 1px #000;
-    font-size: 3em;
+    text-shadow: 10px -5px #000;
+    font-size: 2.5em;
   }
 }
 
@@ -233,13 +235,16 @@ p, footer p {
   background-size: 100%;
   border-radius: 50%;
   width: 50%;
-  height: 37em;
-  margin: 5% auto;
+  height: 27em;
+  margin: 0 auto 5%;
+  position: relative;
+}
+
+#diven:hover {
   animation-name: bgcolor;
-  animation-duration: 4s;
+  animation-duration: 3s;
   animation-iteration-count: infinite;
   animation-direction: alternate;
-  position: relative;
 }
 
 .backgroundImage {
@@ -247,19 +252,22 @@ p, footer p {
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100%;
-  width: 50%;
-  height: 600px;
+  height: 800px;
   margin: 5% auto;
   animation: 5s linear infinite alternate scale;
 }
 
 .aniShadow {
+  text-shadow: 5px -3px #000;
+}
+
+.aniShadow:hover {
   animation: 3s linear infinite alternate aniTextShadow;
 }
 
 .hide {
   width: 30%;
-  margin: 5% auto;
+  margin: 0 auto 5%;
   position: relative;
 }
 
@@ -278,7 +286,7 @@ p, footer p {
 }
 
 .overlay:hover {
-  animation: 3s linear forwards overlayOpacity;
+  animation: 2.5s linear forwards overlayOpacity;
 }
 
 footer {
@@ -388,16 +396,16 @@ footer p {
   background: linear-gradient(90deg, var(--color-1), var(--color-2));
   color: #fff;
   border: 0;
-  margin: 1em auto 0;
+  margin: 2em auto 0;
   padding: 1em 2em;
   font-size: 1.5em;
-  transition: --color-1 1s, --color-2 1s;
+  transition: --color-1 2s, --color-2 1s;
   display: block;
 }
 
 .aniBtn:hover {
-  --color-1: blue;
-  --color-2: red;
+  --color-2: #0f2;
+  --color-1: #f81693;
   cursor: pointer;
 }
 
@@ -413,7 +421,7 @@ footer p {
 }
 
 .aniBtn2:hover {
-  animation: 1s infinite alternate aniBorderRadius;
+  animation: 3s infinite alternate rotateYExample;
 }
 
 /*# sourceMappingURL=index.8c1c22dc.css.map */

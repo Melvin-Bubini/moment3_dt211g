@@ -1,10 +1,12 @@
 @keyframes bgcolor {
     0% {
         left: 0;
+        top: 0;
     }
 
     100% {
         left: 100px;
+        top: 20px;
     }
 }
 
@@ -28,12 +30,12 @@
 }
 
 @keyframes rotateYExample {
-    from {
-        transform: rotateY(0deg);
+    0% {
+        transform: rotateX(0deg);
     }
 
-    to {
-        transform: rotateY(180deg);
+    100% {
+        transform: rotateX(180deg);
     }
 }
 
@@ -42,8 +44,8 @@
         
     }
     100% {
-        text-shadow: 10px 1px black;
-        font-size: 3em;
+        text-shadow: 10px -5px black;
+        font-size: 2.5em;
     }
 }
 
@@ -55,3 +57,4 @@
         opacity: 0%;
     }
 }
+
