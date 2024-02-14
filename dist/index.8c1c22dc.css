@@ -250,12 +250,12 @@ p, footer p {
 }
 
 #diven {
+  height: 35sistem;
   background-image: url("alle.19893472.jpg");
   background-position: center;
   background-size: 100%;
   border-radius: 40%;
   width: 50%;
-  height: 20em;
   margin: 0 auto 5%;
   position: relative;
 }
