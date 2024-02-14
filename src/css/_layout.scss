@@ -198,15 +198,12 @@ p {
     width: 50%;
     height: 27em;
     background-image: url(../pictures/alle.jpg);
-    background-position: center;
+    background-position-x: center;
+    background-position-y: center;
     margin: 0 auto 5%;
     position: relative;
     background-size: 100%;
-    border-radius: 50%;
-}
-
-.div{
-    background-position: center;
+    border-radius: 40%;
 }
 
 #diven:hover {
