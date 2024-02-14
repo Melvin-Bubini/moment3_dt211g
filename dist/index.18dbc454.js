@@ -592,6 +592,10 @@ function toggleMenu() {
     if (style.display === "none") navMenuEl.style.display = "block";
     else navMenuEl.style.display = "none";
 }
+document.getElementById("myForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    this.classList.add("success");
+});
 
 },{}]},["iqNlW","1SICI"], "1SICI", "parcelRequire7015")
 

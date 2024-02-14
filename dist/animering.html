@@ -50,8 +50,7 @@
 
     <main>
         <h1 class="aniShadow">Animeringar</h1>
-        <input type="submit" value="Se vad som finns bakom den svarta rutan" class="aniBtn">
-            <br>
+        <div class="aniBtn">Se vad som finn bakom den svarta rutan</div>
         <div class="hide">
             <picture>
                 <source srcset="/Hund.67e16c83.webp" type="image/webp">
@@ -62,11 +61,27 @@
         </div>
         <h1 class="aniShadow">Se om bilden här under går att flytta på</h1>
         <div id="diven"></div>
-        <section>
-            <input type="submit" value="Vänd på rutan" class="aniBtn2">
+        <input type="submit" value="Vänd på rutan" class="aniBtn2">
             <br>
 
-        </section>
+            <form id="myForm">
+                <label class="formRubrik" for="">Förnamn</label>
+                <input type="text" name="fname" id="fname">
+                <br>
+                <label class="formRubrik" for="">Efternamn</label>
+                <input type="text" name="ename" id="ename">
+                <br>
+                <label class="formRubrik" for="">Roll</label>
+                
+                <label class="formRubrik" for=""><input type="radio" name="" id="">Lärare</label>
+                <br>
+                <label class="formRubrik" for=""><input type="radio" name="" id="">Elev</label>
+                <br>
+                <label class="formRubrik" for=""><input type="radio" name="" id="">Annat</label>
+                <br>
+                <input id="submit-button" type="submit" value="Färdig">
+            </form>
+
 
     </main>
 

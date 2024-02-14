@@ -17,8 +17,8 @@
   }
 
   100% {
-    top: 20px;
-    left: 100px;
+    top: 50px;
+    left: 150px;
   }
 }
 
@@ -60,6 +60,26 @@
 }
 
 @keyframes overlayOpacity {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes successAnimation {
+  0% {
+    background-color: #007bff;
+  }
+
+  100% {
+    background-color: #28a745;
+  }
+}
+
+@keyframes disappearAnimation {
   0% {
     opacity: 1;
   }
@@ -241,10 +261,7 @@ p, footer p {
 }
 
 #diven:hover {
-  animation-name: bgcolor;
-  animation-duration: 3s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
+  animation: 2s linear infinite alternate bgcolor;
 }
 
 .backgroundImage {
@@ -314,7 +331,7 @@ footer p {
     background-color: #fff;
   }
 
-  p, footer p, h1, h2 {
+  p, footer p, h1, h2, .formRubrik {
     color: #000;
   }
 }
@@ -328,7 +345,7 @@ footer p {
     background-color: #383838;
   }
 
-  p, footer p, h1, h2, .menyLänkar {
+  p, footer p, h1, h2, .menyLänkar, .formRubrik {
     color: #fcfcfc;
   }
 
@@ -395,8 +412,10 @@ footer p {
 .aniBtn {
   background: linear-gradient(90deg, var(--color-1), var(--color-2));
   color: #fff;
+  text-align: center;
   border: 0;
-  margin: 2em auto 0;
+  width: 50%;
+  margin: 2em auto .5em;
   padding: 1em 2em;
   font-size: 1.5em;
   transition: --color-1 2s, --color-2 1s;
@@ -422,6 +441,44 @@ footer p {
 
 .aniBtn2:hover {
   animation: 3s infinite alternate rotateYExample;
+}
+
+form {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.formRubrik {
+  margin-bottom: 0%;
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+input[type="text"] {
+  border: 2px solid #000;
+  border-radius: 10%;
+}
+
+#submit-button {
+  background-color: #007bff;
+  border: 2px solid #000;
+  border-radius: 10%;
+  margin-bottom: 0%;
+  padding: 0 2em;
+  font-size: 1.5em;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+#myForm.success #submit-button {
+  animation: .5s ease-in-out forwards successAnimation;
+}
+
+#myForm.success {
+  animation: 4s ease-in-out forwards disappearAnimation;
 }
 
 /*# sourceMappingURL=index.8c1c22dc.css.map */

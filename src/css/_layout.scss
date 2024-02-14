@@ -206,10 +206,7 @@ p {
 }
 
 #diven:hover {
-    animation-name: bgcolor;
-    animation-duration: 3s;
-    animation-direction: alternate;
-    animation-iteration-count: infinite;
+    animation: bgcolor 2s infinite alternate linear;
 }
 
 .backgroundImage {
@@ -220,7 +217,7 @@ p {
     background-size: 100%;
     margin: 5% auto;
     animation: scale 5s infinite alternate linear;
-    
+
 }
 
 .aniShadow {
@@ -291,7 +288,8 @@ footer p {
 
     p,
     h1,
-    h2 {
+    h2,
+    .formRubrik {
         color: base.$text-color;
     }
 }
@@ -312,7 +310,8 @@ footer p {
     p,
     h1,
     h2,
-    .menyLänkar {
+    .menyLänkar,
+    .formRubrik {
         color: base.$text-color-dark;
     }
 
