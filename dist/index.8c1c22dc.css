@@ -440,7 +440,7 @@ footer p {
 }
 
 .aniBtn2:hover {
-  animation: 3s infinite alternate rotateYExample;
+  animation: 2s linear infinite alternate rotateYExample;
 }
 
 form {
