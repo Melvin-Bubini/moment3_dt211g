@@ -583,34 +583,36 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _auto = require("chart.js/auto"); // Importera Chart.js
 var _autoDefault = parcelHelpers.interopDefault(_auto);
 "use strict";
-const ctx = document.getElementById("myChart");
-new (0, _autoDefault.default)(ctx, {
-    type: "bar",
-    data: {
-        labels: [
-            "Red",
-            "Blue",
-            "Yellow",
-            "Green",
-            "Purple",
-            "Orange"
-        ],
-        datasets: [
-            {
-                label: "# of Votes",
-                data: [
-                    12,
-                    19,
-                    3,
-                    5,
-                    2,
-                    3
-                ],
-                borderWidth: 1
+const url = "https://studenter.miun.se/~mallar/dt211g/";
+window.onload = init;
+async function init() {
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        const chartEl = document.getElementById("myChart");
+        // Filtrera ut bara kurser
+        const kurser = data.filter((item)=>item.type === "Kurs");
+        // Sortera kurser baserat på applicantsTotal i fallande ordning
+        const sortedKurser = kurser.sort((a, b)=>b.applicantsTotal - a.applicantsTotal);
+        // Välj de första sex kurserna från den sorterade listan
+        const topSixKurser = sortedKurser.slice(0, 6);
+        new (0, _autoDefault.default)(chartEl, {
+            type: "bar",
+            data: {
+                labels: topSixKurser.map((kurs)=>kurs.name),
+                datasets: [
+                    {
+                        label: "# of Applicants",
+                        data: topSixKurser.map((kurs)=>kurs.applicantsTotal),
+                        borderWidth: 1
+                    }
+                ]
             }
-        ]
+        });
+    } catch  {
+        document.getElementById("error").innerHTML = "<p>N\xe5got gick fel</p>";
     }
-});
+}
 
 },{"@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","chart.js/auto":"d8NN9"}],"gkKU3":[function(require,module,exports) {
 exports.interopDefault = function(a) {
